@@ -11,7 +11,7 @@
 <body>
 
     <nav>
-        <a href="index.html" class="logo">Anurag.Dev</a>
+        <a href="index.html" class="logo">Anurag</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -39,7 +39,33 @@
         </div>
     </footer>
 
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
 
+        // Check for saved user preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Switch Icon and Save Preference
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+
+</html>
 
 </body>
 
