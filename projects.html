@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Anurag Baibhav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Anurag</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Unilancer</h3>
+                    <p style="margin: 10px 0;">A comprehensive freelancing platform for university students.</p>
+                    <div style="margin-bottom: 15px;">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <a href="https://github.com/kundansingh333/Unilancer" class="btn">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Social Media Feed</h3>
+                    <p style="margin: 10px 0;">A dynamic social feed web application featuring responsive design.</p>
+                    <div style="margin-bottom: 15px;">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/AnuragBaibhav/Social_Feed_WebApp" class="btn">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Next Gen Food</h3>
+                    <p style="margin: 10px 0;">A modern food delivery website landing page interface.</p>
+                    <div style="margin-bottom: 15px;">
+                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-tag">Frontend</span>
+                    </div>
+                    <a href="https://github.com/AnuragBaibhav/Next-GenFood" class="btn">View on GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/anuragbaibhav/">LinkedIn</a>
+            <a href="https://github.com/AnuragBaibhav">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

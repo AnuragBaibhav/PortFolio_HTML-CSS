@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +22,8 @@
 
     <header class="hero">
         <h1>Hi, I'm <span>Anurag Baibhav</span></h1>
-        <p>3rd Year B.Tech CSE Student & Full-Stack Developer specialized in MERN Stack, Java, and System Design.</p>
+        <p>3rd Year B.Tech CSE Student & Full-Stack Developer specialized in MERN Stack, Java, and System Design.
+        </p>
         <div style="margin-top: 20px;">
             <a href="projects.html" class="btn">View Projects</a>
             <a href="contact.html" class="btn"
@@ -65,33 +65,5 @@
     </script>
 </body>
 
-</html>
-
-
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-body.classList.add('dark-mode');
-toggleBtn.textContent = '☀️';
-}
-
-toggleBtn.addEventListener('click', () => {
-body.classList.toggle('dark-mode');
-
-if (body.classList.contains('dark-mode')) {
-toggleBtn.textContent = '☀️';
-localStorage.setItem('theme', 'dark');
-} else {
-toggleBtn.textContent = '🌙';
-localStorage.setItem('theme', 'light');
-}
-});
-</script>
-</body>
-
-</html>
-</body>
-
-</html>
-</body>
 
 </html>
